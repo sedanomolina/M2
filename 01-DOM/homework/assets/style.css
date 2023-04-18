@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,300;1,500&family=Roboto:ital,wght@0,400;1,100;1,300;1,400&display=swap");
+
+body {
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(232, 246, 255);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #494c50;
+}
+
+#header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #2dade9;
+  height: 56px;
+  /* padding-left: 15px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#createdBy {
+  font-weight: 600;
+  color: rgb(121, 126, 134);
+  line-height: 50px;
+}
+
+#header span {
+  font-size: 24px;
+  color: white;
+  padding-right: 15px;
+}
+
+#header a {
+  padding-left: 15px;
+}
+
+#container {
+  background-color: #2dade9;
+  box-shadow: 2px 2px 5px#000;
+  width: 50%;
+  min-width: 700px;
+  border-radius: 5px;
+  padding: 10 0;
+}
+
+#inputContainer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+#toDoInput {
+  outline: none;
+  width: 75%;
+  padding-left: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+#addButton {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px; /*espacio alrededor texto*/
+  background-color: #2975d8; /*color botón*/
+  color: #ffffff; /*color texto*/
+  text-decoration: none; /*decoración texto*/
+  text-transform: uppercase; /*capitalización texto*/
+  font-family: "Helvetica", sans-serif; /*tipografía texto*/
+  border-radius: 50px; /*bordes redondos*/
+  cursor: pointer;
+}
+#addButton:hover {
+  background-color: #b8dcf5; /* oscurecer el color de fondo */
+  color: #2e2222;
+}
+
+#toDoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* cursor: pointer; */
+}
+
+.toDoShell {
+  width: 650px;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.toDoShell span {
+  width: 90%;
+}
+.completeText {
+  color: lightgrey;
+  text-decoration: line-through;
+}
+
+.completeCheckbox {
+  transform: scale(1.9);
+}
+.completeCheckbox:hover {
+  cursor: pointer;
+}
