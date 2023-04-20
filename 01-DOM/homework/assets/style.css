@@ -83,6 +83,23 @@ body {
   color: #2e2222;
 }
 
+#yo {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px; /*espacio alrededor texto*/
+  background-color: #2975d8; /*color botón*/
+  color: #ffffff; /*color texto*/
+  text-decoration: none; /*decoración texto*/
+  text-transform: uppercase; /*capitalización texto*/
+  font-family: "Helvetica", sans-serif; /*tipografía texto*/
+  border-radius: 50px; /*bordes redondos*/
+  cursor: pointer;
+}
+
+#yo:hover {
+  background-color: #b8dcf5; /* oscurecer el color de fondo */
+  color: #2e2222;
+}
+
 #toDoContainer {
   width: 100%;
   display: flex;

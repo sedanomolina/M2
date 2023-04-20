@@ -1,3 +1,15 @@
+// MY LINK CODE
+
+const header = document.querySelector('#header')
+const mycode = document.createElement('a')
+mycode.innerHTML= 'My Code'
+mycode.id = 'yo'
+mycode.href = "https://github.com/sedanomolina/M2/blob/main/01-DOM/homework/DOMhomework.js"
+mycode.target = "_blank_"
+header.insertBefore(mycode, header.childNodes[2]);
+
+
+
 // Crear un array vacío llamado 'toDoItems'
 // Tu codigo acá:
 const toDoItems = [];
@@ -150,7 +162,7 @@ function displayToDos() {
   const build = buildToDos(toDoItems)
 
   // Iterar sobre el resultado devuelto por la función 'buildToDos' e ir agregndo cada elemento a 'toDoContainer'
-  build.map(e => toDoContainer.appendChild(e));
+  build.forEach(e => toDoContainer.appendChild(e));
 
 }
 

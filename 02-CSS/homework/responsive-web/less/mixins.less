@@ -1,1 +1,20 @@
 // Mixins acá
+// Mixin para los estilos base del botón
+.btn-base() {
+    background-color: @color-default;
+    border: 1px solid @color-border;
+    border-radius: 10px;
+    color: @color-text;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 10px;
+    transition: background-color 0.4s ease-in-out;
+    width: min-content;
+
+    // Estilos al pasar el mouse
+    &:hover {
+        background-color: @color-hover;
+        color: @color-text-hover;
+        
+    }
+}

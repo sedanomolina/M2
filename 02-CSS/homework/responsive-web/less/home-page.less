@@ -1,30 +1,71 @@
 // Conteindo del Home
 
 .home {
+  margin-top: 91px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 
   .intro {
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      padding: 15px;
+      border-radius: 20px;
+
+    }
 
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
 
   }
 
   .music-images {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
 
     img {
-      width: 28%;
+      max-width: 28%;
+
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      
+
     }
+
+
+    @media @phone {
+
+      display: inline-block;
+      margin: auto;
+      min-height: fit-content;
+      min-width: 100vw;
+      
+      img:nth-child(1){
+        max-width: 100vw;
+        width: 90vw;
+        
+        
+      }
+
+      img:nth-child(2),
+      img:nth-child(3) {
+        display: none;
+      }
+
+    }
+
   }
 
   .musica-nueva {
@@ -58,6 +99,7 @@
       }
 
       .btn {
+        .btn-base();
       }
     }
 
@@ -66,10 +108,27 @@
       margin-left: 4%;
 
       img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
         border-radius: 10px;
+
+        @media @phone{
+          max-width: 100vw;
+          width: 90vw;
+        }
+        
+      }
+      @media @phone{
+        display: inline-block;
+        min-height: fit-content;
+        min-width: 100vw;
       }
     }
+    @media @phone {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0;
+    }
+
   }
 }

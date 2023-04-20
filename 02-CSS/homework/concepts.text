@@ -1,0 +1,19 @@
+
+Framework:
+
+    Un framework es un marco de referencia que nos provee herramientas
+o estilos predefinidos para poder crear una interfaz de usuario más 
+sin necesidad de tener que definir a mano cada una de estas
+ Técnicamente, es importar un archivo con estilos ya definidos en CSS.
+
+ Preprocesador:
+
+ A diferencia de un framework que es como importar un archivo con estilos predefinidos
+ un preprocesador es un programa que permite generar CSS agregando su propia sintaxis
+ Dándonos así un archivo más legible y fácil de mantener.
+
+ Responsive website o  Responsive design:
+
+ Responsive design es una técnica de diseño web que busca adaptar el diseño de la página
+  web a diferentes dispositivos Cómo pueden ser celulares computadoras de escritorio
+   laptops, SmartTV, etc.
