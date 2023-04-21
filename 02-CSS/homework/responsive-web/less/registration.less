@@ -1,0 +1,25 @@
+form {
+    padding-top: 50px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .btn {
+        width: 30%;
+        margin: auto;
+    }
+
+    @media @phone {
+        width: 95%;
+        margin: auto;
+    }
+
+    .btn {
+        @media @phone {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+    }
+}
