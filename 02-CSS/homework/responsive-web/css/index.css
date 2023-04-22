@@ -148,12 +148,37 @@ h5 {
 h2 {
   font-size: 3.2rem;
 }
+@media only screen and (max-width: 500px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
 h3 {
   font-size: 2.8rem;
+}
+@media only screen and (max-width: 500px) {
+  h3 {
+    font-size: 2.7rem;
+  }
+}
+@media only screen and (max-width: 385px) {
+  h3 {
+    font-size: 2.5rem;
+  }
 }
 p {
   font-size: 1.6rem;
   line-height: 1.4;
+}
+@media only screen and (max-width: 500px) {
+  p {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 385px) {
+  p {
+    font-size: 1.4rem;
+  }
 }
 .container {
   max-width: 800px;
@@ -187,10 +212,22 @@ nav ul {
 nav ul li {
   display: inline-block;
   font-size: 1.6rem;
+  padding: 8px;
+}
+@media only screen and (max-width: 500px) {
+  nav ul li {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 385px) {
+  nav ul li {
+    font-size: 1.4rem;
+    padding: 4px;
+  }
 }
 nav ul li a {
   display: block;
-  padding: 8px;
   color: #131111;
   text-decoration: none;
 }
