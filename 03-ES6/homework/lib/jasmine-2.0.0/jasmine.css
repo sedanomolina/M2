@@ -1,4 +1,4 @@
-body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
+body { background-color: #2f2552; padding: 0; margin: 5px; overflow-y: scroll; }
 
 .html-reporter { font-size: 11px; font-family: Monaco, "Lucida Console", monospace; line-height: 14px; color: #333333; }
 .html-reporter a { text-decoration: none; }
@@ -46,7 +46,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 .html-reporter .summary li.pending a { color: #ba9d37; }
 .html-reporter .description + .suite { margin-top: 0; }
 .html-reporter .suite { margin-top: 14px; }
-.html-reporter .suite a { color: #333333; }
+.html-reporter .suite a { color: #e4e1e1; }
 .html-reporter .failures .spec-detail { margin-bottom: 28px; }
 .html-reporter .failures .spec-detail .description { background-color: #b03911; }
 .html-reporter .failures .spec-detail .description a { color: white; }
