@@ -11,7 +11,7 @@ var traverseDomAndCollectElements = function (matchFunc, startEl) {
   // TU CÓDIGO AQUÍ
   let valuematchFunc = matchFunc(startEl);
 
-  if (valuematchFunc === true) resultSet.push(startEl);
+  if (valuematchFunc) resultSet = [...resultSet, startEl];
 
   [...startEl.children].forEach(child => {
     let match = traverseDomAndCollectElements(matchFunc, child);
