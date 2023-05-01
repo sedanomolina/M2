@@ -116,6 +116,9 @@ body {
   justify-content: center;
   gap: 0.5rem;
 }
+body h2 {
+  padding-top: 15px;
+}
 body hr {
   border: none;
   width: 50%;
@@ -126,4 +129,15 @@ body ul {
 }
 body li {
   margin: 0;
+}
+body span {
+  text-align: center;
+}
+body a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+body a:hover {
+  color: blue;
+  transform: scale(1.1);
 }

@@ -177,22 +177,24 @@ const newFriend = {
     email: ''
 }
 const successPost = (res) => {
-    
+
     inputName.value = '';
     inputAge.value = '';
     inputEmail.value = '';
     inputId.placeholder = `ID options 1 to ${res.length}`;
     getAjax(successButtonVerAmigos);
     spanPost.innerHTML = 'Tenemos un nuevo amigo 🎉';
-    
-};
 
+};
+console.log(' hola '.split('').filter(e => e === ' ').length);
+console.log('aaa'.split('a'));
+console.log('  '.split('').length);
+console.log('  '.length);
 
 inputName.addEventListener('input', event => newFriend.name = event.target.value);
 inputAge.addEventListener('input', event => newFriend.age = event.target.value);
 inputEmail.addEventListener('input', event => newFriend.email = event.target.value);
 const eventPost = () => {
-
 
     if (newFriend.name.length === 0) {
         spanPost.innerHTML = 'Escribe un nombre';
@@ -200,8 +202,10 @@ const eventPost = () => {
         spanPost.innerHTML = 'Nombre muy corto';
     } else if (newFriend.name.length > 50) {
         spanPost.innerHTML = 'Nombre muy largo';
-    } else if (newFriend.name.includes(' ')) {
-        spanPost.innerHTML = 'Sin espacios por favor';
+    } else if (newFriend.name[0] === ' ') {
+        spanPost.innerHTML = 'Sin espacios al iniciopor favor';
+    } else if(newFriend.name.split('').filter(character => character !== ' ').length === 0){
+        spanPost.innerHTML = 'Tu nombre es invisible?';
     } else if (isNaN(newFriend.age)) {
         spanPost.innerHTML = 'Edad deve ser un número';
     } else if (Number(newFriend.age) < 1) {
@@ -220,8 +224,8 @@ const eventPost = () => {
         spanPost.innerHTML = 'Ejemplito example@henry.com';
     } else if (newFriend.email.includes(' ')) {
         spanPost.innerHTML = 'Sin espacios por favor';
-    } else {
-        ajaxPost(newFriend,successPost)
+    } else{
+        ajaxPost(newFriend, successPost)
     }
 
 

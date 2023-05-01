@@ -18,6 +18,9 @@ body {
     justify-content: center;
     gap: .5rem;
 
+    h2 {
+        padding-top: 15px;
+    }
     hr {
         border: none;
         width: 50%;
@@ -28,6 +31,18 @@ body {
     }
     li {
         margin: 0;
+    }
+    span {
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        &:hover {
+            color: blue;
+            transform: scale(1.1)
+            
+        }
     }
 }
 
