@@ -53,7 +53,7 @@ const getIds = res => usersId = res.map(user => user.id);
 const successButtonSearch = response => {
     spanAmigo.innerHTML = `${response.name} tiene ${response.age} años de edad, y le puedes escribir a su correo: ${response.email}`
     inputId.value = '';
-    inputId.placeholder = `ID options 1 to ${usersId.length}`;
+    inputId.placeholder = ` ${usersId.length} ID options `;
 };
 
 const returnButtons = (tagSpan, valueinput) => {
@@ -71,7 +71,7 @@ const errorButtonSearch = () => {
 
 const eventButtonSearch = () => {
     getAjax(getIds);// We update the IDs in the variable 'usersId'
-    !endpoint.includes(' ') ? getAjax(successButtonSearch, `/${endpoint}`, errorButtonSearch) : errorButtonSearch();
+    !endpoint.includes(' ') && endpoint.length !== 0 ? getAjax(successButtonSearch, `/${endpoint}`, errorButtonSearch) : errorButtonSearch();
 };
 buttonSearch.addEventListener('click', eventButtonSearch);//Event BUTTON.
 
@@ -123,7 +123,7 @@ const eventDelete = () => {
                 });
 
                 inputDelete.value = ''
-                setTimeout(() => inputId.placeholder = `ID options 1 to ${usersId.length}`, 100);
+                setTimeout(() => inputId.placeholder = ` ${usersId.length} ID options`, 100);
             } else {
                 spanUserDelete.innerHTML = `😅 Eso estuvo serca para ${userToDelet.name} ufff! 🎉`;
                 getAjax(successButtonVerAmigos); //We reuse code to paint friends.
@@ -181,15 +181,14 @@ const successPost = (res) => {
     inputName.value = '';
     inputAge.value = '';
     inputEmail.value = '';
-    inputId.placeholder = `ID options 1 to ${res.length}`;
+    inputId.placeholder = ` ${res.length} ID options`;
     getAjax(successButtonVerAmigos);
     spanPost.innerHTML = 'Tenemos un nuevo amigo 🎉';
+    newFriend.age = '';//Prevent old friend's age from loading.
+    console.log(newFriend.age);
 
 };
-console.log(' hola '.split('').filter(e => e === ' ').length);
-console.log('aaa'.split('a'));
-console.log('  '.split('').length);
-console.log('  '.length);
+console.log(newFriend.age);
 
 inputName.addEventListener('input', event => newFriend.name = event.target.value);
 inputAge.addEventListener('input', event => newFriend.age = event.target.value);
@@ -203,9 +202,11 @@ const eventPost = () => {
     } else if (newFriend.name.length > 50) {
         spanPost.innerHTML = 'Nombre muy largo';
     } else if (newFriend.name[0] === ' ') {
-        spanPost.innerHTML = 'Sin espacios al iniciopor favor';
-    } else if(newFriend.name.split('').filter(character => character !== ' ').length === 0){
+        spanPost.innerHTML = 'Sin espacios al inicio, por favor';
+    } else if (newFriend.name.split('').filter(character => character !== ' ').length === 0) {
         spanPost.innerHTML = 'Tu nombre es invisible?';
+    } else if (newFriend.age.length === 0) {
+        spanPost.innerHTML = 'Escribe una edad, por favor';
     } else if (isNaN(newFriend.age)) {
         spanPost.innerHTML = 'Edad deve ser un número';
     } else if (Number(newFriend.age) < 1) {
@@ -224,7 +225,7 @@ const eventPost = () => {
         spanPost.innerHTML = 'Ejemplito example@henry.com';
     } else if (newFriend.email.includes(' ')) {
         spanPost.innerHTML = 'Sin espacios por favor';
-    } else{
+    } else {
         ajaxPost(newFriend, successPost)
     }
 
