@@ -7,10 +7,19 @@
 </head>
 
 <body>
+
     <canvas id="paint"></canvas>
+    <div class="options-stroke">
+        <div class="container-options">
+            <div class="stroke selected-stroke" data-stroke="5">Thin</div>
+            <div class="stroke" data-stroke="15">Medium</div>
+            <div class="stroke" data-stroke="25">Thick</div>
+        </div>
+    </div>
 
     <div id="color-selector">
         <div class="marker selected" id="black"></div>
+        <div class="marker" id="white"></div>
         <div class="marker" id="purple"></div>
         <div class="marker" id="red"></div>
         <div class="marker" id="blue"></div>
@@ -18,12 +27,18 @@
         <div class="marker" id="orange"></div>
         <div class="marker" id="yellow"></div>
         <div class="marker" id="brown"></div>
-    </div>
+        <div class="marker" id="pink"></div>
+        <div class="marker" id="orange"></div>
+        <div class="marker" id="silver"></div>
+        <div class="marker" id="violet"></div>
+        <!-- <div class="marker" id="golden"></div> -->
 
-    <script src="/socket.io/socket.io.js"></script>
+    </div>
+    <script src="/bundle.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script>
     <script src="event-emitter.js"></script>
     <script src="whiteboard.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js"></script> -->
 </body>
 
 </html>
