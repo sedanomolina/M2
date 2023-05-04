@@ -14,7 +14,7 @@ var io = socketio(server);
 
 var inMemoryDrawHistory = [];
 
-server.listen(1337, function () {
+server.listen(process.env.PORT || 3000, function () {
   console.log('The server is listening on port 1337!');
 });
 
