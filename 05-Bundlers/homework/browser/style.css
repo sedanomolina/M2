@@ -9,7 +9,7 @@
 #color-selector {
     position: fixed;
     top: 0;
-    right: 25%;
+    right: 35%;
     width: fit-content;
     height: fit-content;
     background: rgba(65, 64, 64, 0.466);
@@ -60,4 +60,20 @@
     padding: 8px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     background-color: rgba(250, 235, 215, 0.445);
+}
+
+.my-code {
+    position: fixed;
+    /* top: 0; */
+    left: 45%;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    background: rgba(218, 211, 211, 0.452);
+    padding: 10px;
+    border-radius: 5%;
+}
+a {
+    text-decoration: none;
+    
 }
