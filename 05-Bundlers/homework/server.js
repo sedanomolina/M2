@@ -14,8 +14,10 @@ var io = socketio(server);
 
 var inMemoryDrawHistory = [];
 
-server.listen(process.env.PORT || 1337, function () {
-  console.log('The server is listening on port 1337!');
+const port = process.env.PORT || 3000
+
+server.listen(port, function () {
+  console.log(`The server is listening on ${port}!`);
 });
 
 app.use(express.static(path.join(__dirname, 'browser')));
