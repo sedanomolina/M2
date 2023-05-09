@@ -185,10 +185,7 @@ const successPost = (res) => {
     getAjax(successButtonVerAmigos);
     spanPost.innerHTML = 'Tenemos un nuevo amigo 🎉';
     newFriend.age = '';//Prevent old friend's age from loading.
-    console.log(newFriend.age);
-
 };
-console.log(newFriend.age);
 
 inputName.addEventListener('input', event => newFriend.name = event.target.value);
 inputAge.addEventListener('input', event => newFriend.age = event.target.value);

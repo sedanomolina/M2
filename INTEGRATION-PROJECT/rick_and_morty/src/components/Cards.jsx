@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import Card from './Card';
 
 export default function Cards({ characters }) {
@@ -9,10 +10,17 @@ export default function Cards({ characters }) {
          status={character.status}
          species={character.species}
          gender={character.gender}
-         origin={character.origin.name}
+         origin={character.origin}
          image={character.image}
       />
    ))
 
-   return <div>{showCard}</div>;
+   return <SectionCards>{showCard}</SectionCards>;
 }
+
+const SectionCards = styled.section`
+display: flex;
+gap: 2em;
+border: solid 3px blue;
+padding: 1.5em;
+`
