@@ -7,13 +7,12 @@ const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 export function validate(inputs) {
 
   const errors = {}
+
   if (!inputs.name) errors.name = 'Se requiere un nombre';
   if (!inputs.message) errors.message = 'Se requiere un mensaje';
   if (!regexEmail.test(inputs.email)) errors.email =  'Debe ser un correo electrónico';
 
-
   return errors;
-
 };
 
 export default function Contact() {
@@ -23,6 +22,7 @@ export default function Contact() {
     email: '',
     message: ''
   })
+
   const [errors, setErrors] = useState({
     name: '',
     email: '',
@@ -35,10 +35,8 @@ export default function Contact() {
     const updatedErrors = validate(updatedInputs);
     setInputs(updatedInputs);
     setErrors(updatedErrors);
-
-
-
   }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (Object.keys(errors).length === 0) {
@@ -56,8 +54,6 @@ export default function Contact() {
     } else {
       alert('Debe llenar todos los campos')
     }
-
-
   }
 
   return (

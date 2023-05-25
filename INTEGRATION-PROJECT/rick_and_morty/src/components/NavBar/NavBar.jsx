@@ -27,7 +27,7 @@ export default function NavBar() {
 
                 <li><Link to={'/about'} >About</Link></li>
 
-                {/* <li><Link to={'/detail/:id'} >Details</Link></li> */}
+                <li><Link to={'/log-out'} >Log out</Link></li>
 
                 <div className={styles.dot} ></div>
             </nav>

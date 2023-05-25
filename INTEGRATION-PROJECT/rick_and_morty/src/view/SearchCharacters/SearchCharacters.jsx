@@ -20,7 +20,7 @@ export default function SearchCharacters() {
     };
 
     const onClose = (id) => {
-        setCharacters([...characters.filter(e => e.id !== id)])
+        setCharacters([...characters.filter(character => character.id !== id)])
     }
 
     const onSearchEpisodes = (id) => {

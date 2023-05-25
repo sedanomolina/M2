@@ -46,6 +46,8 @@ function removeTodo(index) {
 }
 
 store.dispatch(addTodo('Comprar pan'))
+store.dispatch(addTodo('Comprar pan'))
+store.dispatch(addTodo('vender pan'))
 store.dispatch(addTodo('Correr'))
 
 store.dispatch(removeTodo(1))
